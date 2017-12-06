@@ -36,5 +36,30 @@
             <th scope="row"><?= __('Modified') ?></th>
             <td><?= h($room->modified) ?></td>
         </tr>
+        <tr>
+            <th scope="row">Liste des films : </th>
+        <tr>
+        
+    </table>
+    <table>
+        <thead>
+        <tr>
+            <th scope="col">L</th>
+            <th scope="col">M</th>
+            <th scope="col">M</th>
+            <th scope="col">J</th>
+            <th scope="col">V</th>
+            <th scope="col">S</th>
+            <th scope="col">D</th>
+        </tr>
+        </thead>
+        <?php foreach ($showtimes as $showtime): ?>
+            <tr>
+                <td><?= h($showtime->movie->name ) ?></td>
+                <td><?= h($showtime->movie->duration ) ?></td>
+                <td><?= h($showtime->start ) ?></td>
+                <td><?= h($showtime->end ) ?></td>
+            </tr>
+        <?php endforeach;  ?>
     </table>
 </div>
