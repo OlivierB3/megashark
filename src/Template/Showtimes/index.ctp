@@ -17,7 +17,7 @@
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('movie_id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('room_id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('room') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('start') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('end') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>

@@ -39,18 +39,18 @@
         <tr>
             <th scope="row">Liste des films : </th>
         <tr>
-        
+       
     </table>
     <table>
         <thead>
         <tr>
-            <th scope="col">L</th>
-            <th scope="col">M</th>
-            <th scope="col">M</th>
-            <th scope="col">J</th>
-            <th scope="col">V</th>
-            <th scope="col">S</th>
-            <th scope="col">D</th>
+            <th scope="col">Lundi</th>
+            <th scope="col">Mardi</th>
+            <th scope="col">Mercredi</th>
+            <th scope="col">Jeudi</th>
+            <th scope="col">Vendredi</th>
+            <th scope="col">Samedi</th>
+            <th scope="col">Dimanche</th>
         </tr>
         </thead>
     <table>
@@ -62,12 +62,15 @@
                         foreach($films[$i] as $film): ?>
                         <tr>
                             <td>
-                                <?= h($film->movie->name ); ?>
+                                <?= h($film->movie->name); ?>
+                                <br> 
+                                <?= h($film->movie->duration); ?>
+                                 minutes
                             </td>
                         </tr>
                       <?php endforeach;
                     else:
-                        echo "<tr><td> Pas de film prévu </td></tr>";
+                        echo "<tr><td>  </td></tr>";
                 endif;?>
             </table>
         <?php endfor;  ?>      
