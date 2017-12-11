@@ -36,21 +36,19 @@
             <th scope="row"><?= __('Modified') ?></th>
             <td><?= h($room->modified) ?></td>
         </tr>
-        <tr>
-            <th scope="row">Liste des films : </th>
-        <tr>
-       
+    
     </table>
+    <h3>This week<h3>
     <table>
         <thead>
         <tr>
-            <th scope="col">Lundi</th>
-            <th scope="col">Mardi</th>
-            <th scope="col">Mercredi</th>
-            <th scope="col">Jeudi</th>
-            <th scope="col">Vendredi</th>
-            <th scope="col">Samedi</th>
-            <th scope="col">Dimanche</th>
+            <th scope="col">Monday</th>
+            <th scope="col">Tuesday</th>
+            <th scope="col">Wednesday</th>
+            <th scope="col">Thursday</th>
+            <th scope="col">Friday</th>
+            <th scope="col">Saturday</th>
+            <th scope="col">Sunday</th>
         </tr>
         </thead>
     <table>
@@ -70,7 +68,8 @@
                         </tr>
                       <?php endforeach;
                     else:
-                        echo "<tr><td>  </td></tr>";
+                        echo "<tr><td> <br> <br>   </td></tr>";
+                     
                 endif;?>
             </table>
         <?php endfor;  ?>      

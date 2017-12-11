@@ -115,4 +115,13 @@ class ShowtimesController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+    
+    public function planning()
+    {
+       $planning = $this->Showtimes->newEntity();
+       $rooms = $this->Showtimes->Rooms->find('list', ['limit' => 200]);
+       
+       $this->set('rooms', $rooms);
+       $this->set('planning', $planning);
+    }
 }
