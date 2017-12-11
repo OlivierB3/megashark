@@ -53,13 +53,23 @@
             <th scope="col">D</th>
         </tr>
         </thead>
-        <?php foreach ($showtimes as $showtime): ?>
-            <tr>
-                <td><?= h($showtime->movie->name ) ?></td>
-                <td><?= h($showtime->movie->duration ) ?></td>
-                <td><?= h($showtime->start ) ?></td>
-                <td><?= h($showtime->end ) ?></td>
-            </tr>
-        <?php endforeach;  ?>
-    </table>
+    <table>
+    <div id="contentBox" style="margin:0px auto; width:70%">
+        <?php for($i=0;$i<7;$i++): ?>
+            <table style="float:left; margin:0; width:14.2%;">
+                <?php 
+                    if(isset($films[$i])):
+                        foreach($films[$i] as $film): ?>
+                        <tr>
+                            <td>
+                                <?= h($film->movie->name ); ?>
+                            </td>
+                        </tr>
+                      <?php endforeach;
+                    else:
+                        echo "<tr><td> Pas de film prévu </td></tr>";
+                endif;?>
+            </table>
+        <?php endfor;  ?>      
+    </div>
 </div>
